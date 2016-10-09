@@ -1,5 +1,5 @@
 /*����ͼ*/
-.focus{ position:relative; width:100%; height:380px; background-color: #000; float: left;}  
+.focus{ position:relative; width:100%; height:380px; background-color: #000; float: left;}
 .focus img{ width: 660px; height: 380px;}
 .focus .shadow .title{width: 260px; height: 65px;padding-left: 30px;padding-top: 20px;}
 .focus .shadow .title a{ text-decoration:none; color:#fff; font-size:14px; font-weight:bolder; overflow:hidden; }
@@ -19,8 +19,8 @@ filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorst
 .focus .D1fBt .current,.focus .D1fBt a:hover{background:#fc114a;}
 .focus .D1fBt img{display:none}
 .focus .D1fBt i{display:none; font-style:normal; }
-.focus .prev,.focus .next{position:absolute;width:40px;height:74px;background: url(../images/focus_btn.png) no-repeat;}
-.focus .prev{top: 50%;margin-top: -37px; left: 0;background-position:0 -74px; cursor:pointer; }
-.focus .next{top: 50%;margin-top: -37px; right: 0;  background-position:-40px -74px;  cursor:pointer;}
+.focus .prev,.focus .next{position:absolute;width:50px;height:100px;background: url(../images/focus_btn.png) no-repeat;}
+.focus .prev{top: 50%;margin-top: -37px; left: 0;background-position:0 -100px; cursor:pointer; }
+.focus .next{top: 50%;margin-top: -37px; right: 0;  background-position:-50px -100px;  cursor:pointer;}
 .focus .prev:hover{  background-position:0 0; }
 .focus .next:hover{  background-position:-40px 0;}

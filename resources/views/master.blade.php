@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-  <title>@yield('title')</title>
+  <title >@yield('title')</title>
   <link rel="stylesheet" href="/css/weui.css">
   <link rel="stylesheet" href="/css/book.css">
 </head>
 <body>
 <div class="bk_title_bar "style="background:url('/Images/x.png') repeat-x">
-<img src="/images/left.png" alt="" class="bk_back" onclick="history.go(-1);">
+<img src="/images/left.png" style="height:50px"alt="" class="bk_back" onclick="history.go(-1);">
 <p class="bk_title_content" style="color:white;text-align:center;">朱云的商城</p>
-<img src="/images/right.png" alt="" class="bk_menu"onclick="onMenuClick();">
+<img src="/images/right.png" style="height:50px"alt="" class="bk_menu"onclick="onMenuClick();">
 
 </div>
 <div class="page">
@@ -28,10 +28,10 @@
     <div class="weui_mask_transition" id="mask"></div>
     <div class="weui_actionsheet" id="weui_actionsheet">
         <div class="weui_actionsheet_menu">
-            <div class="weui_actionsheet_cell" onclick="onMenuItemClick(1)">用户中心</div>
-            <div class="weui_actionsheet_cell" onclick="onMenuItemClick(2)">选择套餐</div>
-            <div class="weui_actionsheet_cell" onclick="onMenuItemClick(3)">周边油站</div>
-            <div class="weui_actionsheet_cell" onclick="onMenuItemClick(4)">常见问题</div>
+            <div class="weui_actionsheet_cell" onclick="onMenuItemClick(1)">主页</div>
+            <div class="weui_actionsheet_cell" onclick="onMenuItemClick(2)">书籍类别</div>
+            <div class="weui_actionsheet_cell" onclick="onMenuItemClick(3)">购物车 </div>
+            <div class="weui_actionsheet_cell" onclick="onMenuItemClick(4)">订单列表</div>
         </div>
         <div class="weui_actionsheet_action">
             <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
@@ -70,15 +70,20 @@ function onMenuItemClick(index) {
   var weuiActionsheet = $('#weui_actionsheet');
   hideActionSheet(weuiActionsheet, mask);
   if(index == 1) {
-
-  } else if(index == 2) {
-
-  } else if(index == 3){
-
-  } else {
     $('.bk_toptips').show();
     $('.bk_toptips span').html("敬请期待!");
     setTimeout(function() {$('.bk_toptips').hide();}, 2000);
+
+  } else if(index == 2) {
+location.href="/category";
+
+
+  } else if(index == 3){
+    location.href="/cart";
+
+  } else {
+    location.href="/order_list";
+
   }
 }
  //与标题栏保持一致

@@ -5,7 +5,7 @@
 @section('content')
 <link href="/css/datouwang.css" rel="stylesheet" type="text/css" />
 
-<div class="page .bk_content">
+<div class="page .bk_content" style="top:0px;">
 <div id="fsD1" class="focus" style="margin-left:0px,width:1px">
     <div id="D1pic1" class="fPic">
       @foreach ($pdt_images as $pdt_image)
@@ -49,7 +49,14 @@
 <div class="weui_cells">
 <div class="weui_cell">
 
-<p> {!!$pdt_content->content!!}</p>
+@if($pdt_content!=null){
+
+  {!!$pdt_content->content!!}
+}
+ @else
+
+ @endif
+
 </div>
 
 </div></div>
@@ -59,7 +66,7 @@
 
  </div>
  <div class="bk_half_area"style="float:right">
- <button class="weui_btn weui_btn_default">结算(<span id="cart_num"class="m3_price">{{$count}}</span>)</button>
+ <button id="jiesuan"class="weui_btn weui_btn_default">查看购物车<span id=""class="m3_price"></span></button>
 
   </div>
 </div>
@@ -120,6 +127,10 @@ $('#gogogo').click(function () {
          });
        });
 
+$('#jiesuan').click(function () {
 
+
+  location.href='/cart';
+});
 </script>
 @endsection
